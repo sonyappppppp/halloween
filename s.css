@@ -1,0 +1,107 @@
+@font-face {
+    font-family: Henny-Penny-Regular;
+    src: url(HennyPenny-Regular.ttf)
+}
+
+h1 {
+    font-family: Henny-Penny-Regular;
+    animation-name: flicker;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+    font-size: 1000%;
+}
+
+h2 {
+    font-family: Henny-Penny-Regular;
+    animation-name: flick;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+    font-size: 300%;
+}
+
+svg {
+animation-name: fly;
+animation-duration: 10s;
+animation-iteration-count: infinite;
+animation-direction: alternate;
+animation-timing-function: ease;
+width: 100px;
+height: auto;
+}
+
+body {
+    background: linear-gradient(to left, rgb(26, 26, 119), rgb(70, 7, 129));
+}
+
+
+@keyframes flick
+{
+0%,
+6%,
+12% {
+text-shadow: none;
+color: #111111;
+}
+    
+3%,
+9% {
+text-shadow: 0 0 8px rgba(233, 19, 19, 0.6);
+color: #e21313;
+}
+    
+60%,
+100% {
+text-shadow: 0 0 8px rgba(245, 19, 19, 0.6), 0 0 16px rgba(250, 103, 1, 0.4), 0 0 20px rgba(255, 0, 84, 0.2), 0 0 22px rgba(255, 0, 84, 0.1);
+color: #ca1818;
+}
+}
+
+
+@keyframes flicker
+{
+0%,
+6%,
+12% {
+text-shadow: none;
+color: #111111;
+}
+    
+3%,
+9% {
+text-shadow: 0 0 8px rgba(250, 103, 1, 0.6);
+color: #fa6701;
+}
+    
+60%,
+100% {
+text-shadow: 0 0 8px rgba(250, 103, 1, 0.6), 0 0 16px rgba(250, 103, 1, 0.4), 0 0 20px rgba(255, 0, 84, 0.2), 0 0 22px rgba(255, 0, 84, 0.1);
+color: #fa6701;
+}
+}
+
+
+@keyframes fly {
+
+0% {transform: tanslate (0,0) rotate(0deg);
+}
+
+25% {transform: translate(50vw, 20vh) rotate(45deg) scale(1.75);}
+
+
+50% { transform: translate(90vw, 30vh) rotate(45deg) scale(1.25); opacity: 0.5; 
+}
+
+75% {
+    transform: translate(30vw, 50vh) rotate(-20deg);}
+
+100% {
+    transform: translate(0,0) rotate(0deg) scale(1.5); opacity: 1;
+}
+
+}
